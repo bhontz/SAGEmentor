@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F5B4EECE3F5FA9482FAC511 /* Pods_SAGEmentor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76445916F9E182237CFC7597 /* Pods_SAGEmentor.framework */; };
+		5F13B4153B961A187788B05F /* Pods_SAGEmentorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1416844579E954FFDC62C1 /* Pods_SAGEmentorTests.framework */; };
+		A29EA7A123DB9C0B00E1A9A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EA7A023DB9C0B00E1A9A6 /* AppDelegate.swift */; };
+		A29EA7A323DB9C0B00E1A9A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EA7A223DB9C0B00E1A9A6 /* SceneDelegate.swift */; };
+		A29EA7A523DB9C0B00E1A9A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EA7A423DB9C0B00E1A9A6 /* ContentView.swift */; };
+		A29EA7A723DB9C0C00E1A9A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29EA7A623DB9C0C00E1A9A6 /* Assets.xcassets */; };
+		A29EA7AA23DB9C0C00E1A9A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29EA7A923DB9C0C00E1A9A6 /* Preview Assets.xcassets */; };
+		A29EA7AD23DB9C0C00E1A9A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A29EA7AB23DB9C0C00E1A9A6 /* LaunchScreen.storyboard */; };
+		A29EA7B823DB9C0C00E1A9A6 /* SAGEmentorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EA7B723DB9C0C00E1A9A6 /* SAGEmentorTests.swift */; };
+		A2C8105C23DBA7FF0051C458 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8105B23DBA7FF0051C458 /* GlobalData.swift */; };
+		A2FA0FC123DBAFB400F8B26D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2FA0FC023DBAFB400F8B26D /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A29EA7B423DB9C0C00E1A9A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A29EA79523DB9C0B00E1A9A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A29EA79C23DB9C0B00E1A9A6;
+			remoteInfo = SAGEmentor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		175187283902B9D12A7E7415 /* Pods-SAGEmentor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAGEmentor.release.xcconfig"; path = "Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor.release.xcconfig"; sourceTree = "<group>"; };
+		3066BF68D4CB8781104981EB /* Pods-SAGEmentorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAGEmentorTests.release.xcconfig"; path = "Target Support Files/Pods-SAGEmentorTests/Pods-SAGEmentorTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E1416844579E954FFDC62C1 /* Pods_SAGEmentorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAGEmentorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76445916F9E182237CFC7597 /* Pods_SAGEmentor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAGEmentor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		909A15701651BE20DBE10559 /* Pods-SAGEmentorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAGEmentorTests.debug.xcconfig"; path = "Target Support Files/Pods-SAGEmentorTests/Pods-SAGEmentorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		939CAFE33F132A5D94D3A119 /* Pods-SAGEmentor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAGEmentor.debug.xcconfig"; path = "Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor.debug.xcconfig"; sourceTree = "<group>"; };
+		A29EA79D23DB9C0B00E1A9A6 /* SAGEmentor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAGEmentor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29EA7A023DB9C0B00E1A9A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A29EA7A223DB9C0B00E1A9A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A29EA7A423DB9C0B00E1A9A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A29EA7A623DB9C0C00E1A9A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A29EA7A923DB9C0C00E1A9A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A29EA7AC23DB9C0C00E1A9A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A29EA7AE23DB9C0C00E1A9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A29EA7B323DB9C0C00E1A9A6 /* SAGEmentorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAGEmentorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29EA7B723DB9C0C00E1A9A6 /* SAGEmentorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAGEmentorTests.swift; sourceTree = "<group>"; };
+		A29EA7B923DB9C0C00E1A9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2C8105B23DBA7FF0051C458 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		A2FA0FC023DBAFB400F8B26D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A29EA79A23DB9C0B00E1A9A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F5B4EECE3F5FA9482FAC511 /* Pods_SAGEmentor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29EA7B023DB9C0C00E1A9A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F13B4153B961A187788B05F /* Pods_SAGEmentorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A29EA79423DB9C0B00E1A9A6 = {
+			isa = PBXGroup;
+			children = (
+				A29EA79F23DB9C0B00E1A9A6 /* SAGEmentor */,
+				A29EA7B623DB9C0C00E1A9A6 /* SAGEmentorTests */,
+				A29EA79E23DB9C0B00E1A9A6 /* Products */,
+				DCC4987F887A49B0F5BFD1E0 /* Pods */,
+				C4F2F27467A005B0BC6E0F2A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A29EA79E23DB9C0B00E1A9A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A29EA79D23DB9C0B00E1A9A6 /* SAGEmentor.app */,
+				A29EA7B323DB9C0C00E1A9A6 /* SAGEmentorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A29EA79F23DB9C0B00E1A9A6 /* SAGEmentor */ = {
+			isa = PBXGroup;
+			children = (
+				A29EA7A023DB9C0B00E1A9A6 /* AppDelegate.swift */,
+				A29EA7A223DB9C0B00E1A9A6 /* SceneDelegate.swift */,
+				A29EA7A423DB9C0B00E1A9A6 /* ContentView.swift */,
+				A2C8105B23DBA7FF0051C458 /* GlobalData.swift */,
+				A29EA7A623DB9C0C00E1A9A6 /* Assets.xcassets */,
+				A29EA7AB23DB9C0C00E1A9A6 /* LaunchScreen.storyboard */,
+				A29EA7AE23DB9C0C00E1A9A6 /* Info.plist */,
+				A2FA0FC023DBAFB400F8B26D /* GoogleService-Info.plist */,
+				A29EA7A823DB9C0C00E1A9A6 /* Preview Content */,
+			);
+			path = SAGEmentor;
+			sourceTree = "<group>";
+		};
+		A29EA7A823DB9C0C00E1A9A6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A29EA7A923DB9C0C00E1A9A6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A29EA7B623DB9C0C00E1A9A6 /* SAGEmentorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A29EA7B723DB9C0C00E1A9A6 /* SAGEmentorTests.swift */,
+				A29EA7B923DB9C0C00E1A9A6 /* Info.plist */,
+			);
+			path = SAGEmentorTests;
+			sourceTree = "<group>";
+		};
+		C4F2F27467A005B0BC6E0F2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76445916F9E182237CFC7597 /* Pods_SAGEmentor.framework */,
+				5E1416844579E954FFDC62C1 /* Pods_SAGEmentorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCC4987F887A49B0F5BFD1E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				939CAFE33F132A5D94D3A119 /* Pods-SAGEmentor.debug.xcconfig */,
+				175187283902B9D12A7E7415 /* Pods-SAGEmentor.release.xcconfig */,
+				909A15701651BE20DBE10559 /* Pods-SAGEmentorTests.debug.xcconfig */,
+				3066BF68D4CB8781104981EB /* Pods-SAGEmentorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A29EA79C23DB9C0B00E1A9A6 /* SAGEmentor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A29EA7BC23DB9C0C00E1A9A6 /* Build configuration list for PBXNativeTarget "SAGEmentor" */;
+			buildPhases = (
+				A38CE9A6DC3A98244DB7343C /* [CP] Check Pods Manifest.lock */,
+				A29EA79923DB9C0B00E1A9A6 /* Sources */,
+				A29EA79A23DB9C0B00E1A9A6 /* Frameworks */,
+				A29EA79B23DB9C0B00E1A9A6 /* Resources */,
+				375FC841CAAD962C41DF11FC /* [CP] Embed Pods Frameworks */,
+				D6E0DC0D84D14FE7ED555D75 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SAGEmentor;
+			productName = SAGEmentor;
+			productReference = A29EA79D23DB9C0B00E1A9A6 /* SAGEmentor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A29EA7B223DB9C0C00E1A9A6 /* SAGEmentorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A29EA7BF23DB9C0C00E1A9A6 /* Build configuration list for PBXNativeTarget "SAGEmentorTests" */;
+			buildPhases = (
+				D41E3DB2E3F2257104B3E72C /* [CP] Check Pods Manifest.lock */,
+				A29EA7AF23DB9C0C00E1A9A6 /* Sources */,
+				A29EA7B023DB9C0C00E1A9A6 /* Frameworks */,
+				A29EA7B123DB9C0C00E1A9A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A29EA7B523DB9C0C00E1A9A6 /* PBXTargetDependency */,
+			);
+			name = SAGEmentorTests;
+			productName = SAGEmentorTests;
+			productReference = A29EA7B323DB9C0C00E1A9A6 /* SAGEmentorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A29EA79523DB9C0B00E1A9A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = brad.hontz;
+				TargetAttributes = {
+					A29EA79C23DB9C0B00E1A9A6 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					A29EA7B223DB9C0C00E1A9A6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = A29EA79C23DB9C0B00E1A9A6;
+					};
+				};
+			};
+			buildConfigurationList = A29EA79823DB9C0B00E1A9A6 /* Build configuration list for PBXProject "SAGEmentor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A29EA79423DB9C0B00E1A9A6;
+			productRefGroup = A29EA79E23DB9C0B00E1A9A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A29EA79C23DB9C0B00E1A9A6 /* SAGEmentor */,
+				A29EA7B223DB9C0C00E1A9A6 /* SAGEmentorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A29EA79B23DB9C0B00E1A9A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29EA7AD23DB9C0C00E1A9A6 /* LaunchScreen.storyboard in Resources */,
+				A2FA0FC123DBAFB400F8B26D /* GoogleService-Info.plist in Resources */,
+				A29EA7AA23DB9C0C00E1A9A6 /* Preview Assets.xcassets in Resources */,
+				A29EA7A723DB9C0C00E1A9A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29EA7B123DB9C0C00E1A9A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		375FC841CAAD962C41DF11FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A38CE9A6DC3A98244DB7343C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SAGEmentor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D41E3DB2E3F2257104B3E72C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SAGEmentorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E0DC0D84D14FE7ED555D75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A29EA79923DB9C0B00E1A9A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29EA7A123DB9C0B00E1A9A6 /* AppDelegate.swift in Sources */,
+				A29EA7A323DB9C0B00E1A9A6 /* SceneDelegate.swift in Sources */,
+				A2C8105C23DBA7FF0051C458 /* GlobalData.swift in Sources */,
+				A29EA7A523DB9C0B00E1A9A6 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29EA7AF23DB9C0C00E1A9A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29EA7B823DB9C0C00E1A9A6 /* SAGEmentorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A29EA7B523DB9C0C00E1A9A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A29EA79C23DB9C0B00E1A9A6 /* SAGEmentor */;
+			targetProxy = A29EA7B423DB9C0C00E1A9A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A29EA7AB23DB9C0C00E1A9A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A29EA7AC23DB9C0C00E1A9A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A29EA7BA23DB9C0C00E1A9A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A29EA7BB23DB9C0C00E1A9A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A29EA7BD23DB9C0C00E1A9A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939CAFE33F132A5D94D3A119 /* Pods-SAGEmentor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SAGEmentor/Preview Content\"";
+				DEVELOPMENT_TEAM = Y72GG46X97;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SAGEmentor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointview.SAGEmentor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A29EA7BE23DB9C0C00E1A9A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 175187283902B9D12A7E7415 /* Pods-SAGEmentor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SAGEmentor/Preview Content\"";
+				DEVELOPMENT_TEAM = Y72GG46X97;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SAGEmentor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointview.SAGEmentor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A29EA7C023DB9C0C00E1A9A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 909A15701651BE20DBE10559 /* Pods-SAGEmentorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y72GG46X97;
+				INFOPLIST_FILE = SAGEmentorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointview.SAGEmentorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SAGEmentor.app/SAGEmentor";
+			};
+			name = Debug;
+		};
+		A29EA7C123DB9C0C00E1A9A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3066BF68D4CB8781104981EB /* Pods-SAGEmentorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y72GG46X97;
+				INFOPLIST_FILE = SAGEmentorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointview.SAGEmentorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SAGEmentor.app/SAGEmentor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A29EA79823DB9C0B00E1A9A6 /* Build configuration list for PBXProject "SAGEmentor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29EA7BA23DB9C0C00E1A9A6 /* Debug */,
+				A29EA7BB23DB9C0C00E1A9A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A29EA7BC23DB9C0C00E1A9A6 /* Build configuration list for PBXNativeTarget "SAGEmentor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29EA7BD23DB9C0C00E1A9A6 /* Debug */,
+				A29EA7BE23DB9C0C00E1A9A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A29EA7BF23DB9C0C00E1A9A6 /* Build configuration list for PBXNativeTarget "SAGEmentorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29EA7C023DB9C0C00E1A9A6 /* Debug */,
+				A29EA7C123DB9C0C00E1A9A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A29EA79523DB9C0B00E1A9A6 /* Project object */;
+}
