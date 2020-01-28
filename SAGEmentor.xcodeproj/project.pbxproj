@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4F5B4EECE3F5FA9482FAC511 /* Pods_SAGEmentor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76445916F9E182237CFC7597 /* Pods_SAGEmentor.framework */; };
 		5F13B4153B961A187788B05F /* Pods_SAGEmentorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1416844579E954FFDC62C1 /* Pods_SAGEmentorTests.framework */; };
+		A22B0B6123DE069D00097176 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22B0B6023DE069D00097176 /* WelcomeView.swift */; };
+		A22B0B6323DE06DF00097176 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22B0B6223DE06DF00097176 /* LoginView.swift */; };
+		A26110CD23E0A86C0040A247 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26110CC23E0A86C0040A247 /* HomeView.swift */; };
 		A29EA7A123DB9C0B00E1A9A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EA7A023DB9C0B00E1A9A6 /* AppDelegate.swift */; };
 		A29EA7A323DB9C0B00E1A9A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EA7A223DB9C0B00E1A9A6 /* SceneDelegate.swift */; };
 		A29EA7A523DB9C0B00E1A9A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EA7A423DB9C0B00E1A9A6 /* ContentView.swift */; };
@@ -37,6 +40,9 @@
 		76445916F9E182237CFC7597 /* Pods_SAGEmentor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAGEmentor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		909A15701651BE20DBE10559 /* Pods-SAGEmentorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAGEmentorTests.debug.xcconfig"; path = "Target Support Files/Pods-SAGEmentorTests/Pods-SAGEmentorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		939CAFE33F132A5D94D3A119 /* Pods-SAGEmentor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAGEmentor.debug.xcconfig"; path = "Target Support Files/Pods-SAGEmentor/Pods-SAGEmentor.debug.xcconfig"; sourceTree = "<group>"; };
+		A22B0B6023DE069D00097176 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		A22B0B6223DE06DF00097176 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A26110CC23E0A86C0040A247 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A29EA79D23DB9C0B00E1A9A6 /* SAGEmentor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAGEmentor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29EA7A023DB9C0B00E1A9A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A29EA7A223DB9C0B00E1A9A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 				A29EA7A023DB9C0B00E1A9A6 /* AppDelegate.swift */,
 				A29EA7A223DB9C0B00E1A9A6 /* SceneDelegate.swift */,
 				A29EA7A423DB9C0B00E1A9A6 /* ContentView.swift */,
+				A22B0B6223DE06DF00097176 /* LoginView.swift */,
+				A22B0B6023DE069D00097176 /* WelcomeView.swift */,
+				A26110CC23E0A86C0040A247 /* HomeView.swift */,
 				A2C8105B23DBA7FF0051C458 /* GlobalData.swift */,
 				A29EA7A623DB9C0C00E1A9A6 /* Assets.xcassets */,
 				A29EA7AB23DB9C0C00E1A9A6 /* LaunchScreen.storyboard */,
@@ -332,6 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22B0B6323DE06DF00097176 /* LoginView.swift in Sources */,
+				A26110CD23E0A86C0040A247 /* HomeView.swift in Sources */,
+				A22B0B6123DE069D00097176 /* WelcomeView.swift in Sources */,
 				A29EA7A123DB9C0B00E1A9A6 /* AppDelegate.swift in Sources */,
 				A29EA7A323DB9C0B00E1A9A6 /* SceneDelegate.swift in Sources */,
 				A2C8105C23DBA7FF0051C458 /* GlobalData.swift in Sources */,

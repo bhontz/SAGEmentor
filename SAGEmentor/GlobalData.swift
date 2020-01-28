@@ -9,27 +9,42 @@
 import Foundation
 import Firebase
 
+// these three structures are used for the QOD API call
+
+struct Response: Decodable {
+    var contents: Quotes
+}
+
+struct Quotes: Decodable {
+    var quotes: [Result]
+}
+
+struct Result: Decodable {
+    var date: String
+    var quote: String
+}
+
+
+var currentUser = UserInfo(username:"", emailaddress:"")
+
 class UserInfo: NSObject, NSCoding {
     
     var userName: String?
     var emailAddress: String?
-    var userCredential: AuthCredential?
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.userName, forKey:"username")
         aCoder.encode(self.emailAddress, forKey:"emailaddress")
-        aCoder.encode(self.userCredential, forKey:"credential")
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.userName = aDecoder.decodeObject(forKey:"username") as? String
         self.emailAddress = aDecoder.decodeObject(forKey:"emailaddress") as? String
-        self.userCredential = aDecoder.decodeObject(forKey:"credential") as? AuthCredential
     }
     
-    init(username: String, emailaddress: String, credential: AuthCredential) {
+    init(username: String, emailaddress: String) {
         self.userName = username
         self.emailAddress = emailaddress
-        self.userCredential = credential
     }
 }
+

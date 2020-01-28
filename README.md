@@ -1,4 +1,4 @@
-﻿**STEMmentor SwiftUI Illustrative App**
+﻿**SAGEmentor SwiftUI Illustrative App**
 
 An illustrative Swift app for mentoring a 2020 Technovation Girls challenge team.
 

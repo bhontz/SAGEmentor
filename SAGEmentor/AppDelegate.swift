@@ -18,24 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        
-        // go out and check to see if you have a saved user and try to authenticate with that
-        if let currentUser = self.getObject(fileName: "currentUserId") as? UserInfo {
-            print("I recovered: \(currentUser.userName ?? "bogus") \(currentUser.emailAddress ?? "bogus")")
-            
-            let firebaseAuth = Auth.auth()
-            firebaseAuth.signIn(with: (currentUser.userCredential ?? nil)!) { (result, error) in
-                if error == nil {
-                    print("already had a stored login:")
-                    print(result?.user.email)
-                    print(result?.user.displayName)
-                    print(result?.user.metadata.creationDate)
-                    print(result?.user.metadata.lastSignInDate)
-                } else {
-                    print(error?.localizedDescription)
-                }
-            }
-        }
+                
+//        // go out and check to see if you have a saved user and try to authenticate with that
+//        if let currentUser = self.getObject(fileName: "currentUserId") as? UserInfo {
+//            print("I recovered: \(currentUser.userName ?? "bogus") \(currentUser.emailAddress ?? "bogus")")
+//
+//            let firebaseAuth = Auth.auth()
+//            firebaseAuth.signIn(with: (currentUser.userCredential ?? nil)!) { (result, error) in
+//                if error == nil {
+//                    print("already had a stored login:")
+//                    print(result?.user.email)
+//                    print(result?.user.displayName)
+//                    print(result?.user.metadata.creationDate)
+//                    print(result?.user.metadata.lastSignInDate)
+//                } else {
+//                    print(error?.localizedDescription)
+//                }
+//            }
+//        }
             
         return true
     }
@@ -49,21 +49,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             guard let authentication = user.authentication else {return}
             let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
             let firebaseAuth = Auth.auth()
-//            if firebaseAuth.currentUser != nil {
-//                print("AppDelegate, current user: \(firebaseAuth.currentUser?.email ?? "bogus")")
-//                return
-//            }
             firebaseAuth.signIn(with: credential) { (result, error) in
                 if error == nil {
                     guard let un = result?.user.displayName else {return}
                     guard let em = result?.user.email else {return}
-                    let currentUser = UserInfo(username: un, emailaddress: em, credential: credential)
-
-                    if self.saveObject(fileName: "currentUserId", object: currentUser) {
-                        print("saved log in credentials")
-                    } else {
-                        print("error saving log in credentials")
-                    }
+                    currentUser = UserInfo(username: un, emailaddress: em)
+//
+//                    if self.saveObject(fileName: "currentUserId", object: currentUser) {
+//                        print("saved log in credentials")
+//                    } else {
+//                        print("error saving log in credentials")
+//                    }
                     
                     print("just logged in via button:")
                     print(credential)
