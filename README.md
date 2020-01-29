@@ -8,7 +8,9 @@ We'll also be using this repo to learn how use Git/Github!
 
 **Version History**
 
-Summary of functionality through 2020-01-23:
+Summary of functionality through 2020-01-29:
+
+..+ Added placeholder for home screen, still working on "login" screen techniques
 
 ..+ Initial commit, Google signin/signout and persistent storage of authentication.
 

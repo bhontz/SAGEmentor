@@ -17,16 +17,26 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                LoginView()
-                Divider()
-                Button("Welcome View") {
-                    self.pushed.toggle()
-                }
-                NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView() }
-            }.onAppear(perform:loadData)
+//                Button(action: {
+//                    SocialLogin().attemptLoginGoogle()
+//                    //self.pushed.toggle()
+//                    self.pushed = true
+//                }, label: {Image("google_signin")
+//                            .resizable()
+//                            .frame(width:400, height:100)
+//
+//                })
+//                NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView()}
+                LoginView(results: $results)
+//                Divider()
+//                Button("Welcome View") {
+//                    self.pushed.toggle()
+//                }
+//                NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView() }
+            }.onAppear(perform:loadData)  // gets data from the Quote Of the Day API
         }
     }
-    
+        
     func loadData() {
         guard let url = URL(string: "https://quotes.rest/qod.json?category=inspire") else {
             print("invalid URL!")
@@ -49,44 +59,62 @@ struct ContentView: View {
     
 }
 
-struct ToWelcomeView: View {
-    @Binding var pushed: Bool
-    @Binding var results : [Result]
-    var body: some View {
-        WelcomeView(results: $results)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: BackToLogin(label:"Sign In as another user") {
-                self.pushed = false
-            })
-    }
-}
+//struct ToWelcomeView: View {
+//    @Binding var pushed: Bool
+//    @Binding var results : [Result]
+//    var body: some View {
+//        WelcomeView(results: $results)
+//            .navigationBarBackButtonHidden(true)
+//            .navigationBarItems(leading: BackToLogin(label:"Sign In as another user") {
+//                self.pushed = false
+//            })
+//    }
+//}
+//
+//struct BackToLogin: View {
+//    let label: String
+//    let closure: () -> ()
+//
+//    var body: some View {
+//        Button(action: { self.signOut(); self.closure() }) {
+//            HStack {
+//                Image(systemName: "chevron.left")
+//                Text(label)
+//            }
+//        }
+//    }
+//    func signOut() {
+//        print("Signing out... ")
+//        currentUser = UserInfo(username:"", emailaddress:"")
+//        GIDSignIn.sharedInstance().signOut()
+//        let firebaseAuth = Auth.auth()
+//        do {
+//            try firebaseAuth.signOut()
+//        } catch let signOutError as NSError {
+//            print("Error signing out of Firebase: %@", signOutError)
+//            return
+//        }
+//        print("Signed out of Firebase and Google!")
+//    }
+//}
 
-struct BackToLogin: View {
-    let label: String
-    let closure: () -> ()
+// You only need this if your using the "button()" methodology of calling the google signin process
+//struct SocialLogin: UIViewRepresentable {
+//
+//    func makeUIView(context: UIViewRepresentableContext<SocialLogin>) -> UIView {
+//        return UIView()
+//    }
+//
+//    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<SocialLogin>) {
+//    }
+//
+//    func attemptLoginGoogle() {
+//        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
+//        GIDSignIn.sharedInstance()?.signIn()
+//    }
+//
+//}
 
-    var body: some View {
-        Button(action: { self.signOut(); self.closure() }) {
-            HStack {
-                Image(systemName: "chevron.left")
-                Text(label)
-            }
-        }
-    }
-    func signOut() {
-        print("Signing out... ")
-        currentUser = UserInfo(username:"", emailaddress:"")
-        GIDSignIn.sharedInstance().signOut()
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print("Error signing out of Firebase: %@", signOutError)
-            return
-        }
-        print("Signed out of Firebase and Google!")
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -11,10 +11,80 @@ import SwiftUI
 struct HomeView: View {
     @Binding var god: String
     var body: some View {
-        VStack {
-            Text("Today I will:")
-            Divider()
+        VStack(spacing: 10) {
+            //Text("Today I will:")
+            Image("morning")
+                .resizable()
+                .scaledToFit()
+                .frame(width:400, height:80)
             Text(god)
+                .font(.title)
+            HStack(spacing: 20) {
+                Button(action: {
+                    print("pressed the button!")
+                }) {
+                    Image("greenbutton")
+                        .renderingMode(.original)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+                }.offset(x: 10)
+                Text("To Do")
+                Spacer()
+            }
+            HStack(spacing: 20) {
+                Spacer()
+                Text("Stress Relief")
+                Button(action: {
+                    print("pressed the button!")
+                }) {
+                    Image("redbutton")
+                        .renderingMode(.original)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+                }.offset(x: -10)
+            }
+            HStack(spacing: 20) {
+                Button(action: {
+                    print("pressed the button!")
+                }) {
+                    Image("greenbutton")
+                        .renderingMode(.original)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+                }.offset(x: 10)
+                Text("Schedule")
+                Spacer()
+            }
+            HStack(spacing: 20) {
+                Spacer()
+                Text("Trackers")
+                Button(action: {
+                    print("pressed the button!")
+                }) {
+                    Image("redbutton")
+                        .renderingMode(.original)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+                }.offset(x: -10)
+            }
+            HStack(spacing: 20) {
+                Button(action: {
+                    print("pressed the button!")
+                }) {
+                    Image("greenbutton")
+                        .renderingMode(.original)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+                }.offset(x: 10)
+                Text("Snacks")
+                Spacer()
+            }
+            Spacer()
         }
     }
 }
