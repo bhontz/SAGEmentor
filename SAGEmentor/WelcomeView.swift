@@ -13,15 +13,10 @@ import Firebase
 struct WelcomeView: View {
     @Binding var results : [Result]
     @State private var god: String = ""
-    @State private var pushed: Bool = false
     @EnvironmentObject var session: SessionStore
 
     var body: some View {
         VStack {
-//            Button("sign in as another user") {
-//                self.signOut()
-//            }
-//            .padding(.vertical, 200.0)
             timeOfDayImage()
             Text(results[0].quote)
                 .font(.title)
@@ -36,13 +31,14 @@ struct WelcomeView: View {
                 .lineLimit(nil)
                 .padding()
             Divider()
-            Button("Home View") {
-                self.pushed.toggle()
+            NavigationLink(destination: HomeView(god: $god)) {
+                Text("Home View")
             }
             .buttonStyle(GradientBackgroundStyle())
-            NavigationLink(destination: ToHomeView(pushed: $pushed, god: $god), isActive: $pushed) { EmptyView() }
             // next up is a navigation link to the home screen
         }
+        // .navigationBarTitle("Home", displayMode: .automatic)
+        // I don't think you need this as this really is the first view
     }
     
     func timeOfDayImage() -> Image {
@@ -74,32 +70,6 @@ struct WelcomeView: View {
         }
         print("Signed out of Firebase and Google!")
         self.session.unbind()
-    }
-}
-
-struct ToHomeView: View {
-    @Binding var pushed: Bool
-    @Binding var god : String
-    var body: some View {
-        HomeView(god: $god)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: BackToWelcome(label:"Back") {
-                self.pushed = false
-            })
-    }
-}
-
-struct BackToWelcome: View {
-    let label: String
-    let closure: () -> ()
-
-    var body: some View {
-        Button(action: { self.closure() }) {
-            HStack {
-                Image(systemName: "chevron.left")
-                Text(label)
-            }
-        }
     }
 }
 

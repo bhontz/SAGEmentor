@@ -1,4 +1,4 @@
-﻿**SAGEmentor SwiftUI Illustrative App**
+**SAGEmentor SwiftUI Illustrative App**
 
 An illustrative Swift app for mentoring a 2020 Technovation Girls challenge team.
 
@@ -9,6 +9,8 @@ We'll also be using this repo to learn how use Git/Github!
 **Version History**
 
 Summary of functionality through 2020-01-31
+
+..+ started to stub out the todo list functionality
 
 ..+ Have a working login process, but no "log out" outside of doing so from within the firebase admin
 

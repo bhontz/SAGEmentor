@@ -29,7 +29,9 @@ struct ContentView: View {
                     })
                 }
             }
-        }.onAppear(perform: listenAndLoad)
+            .onAppear(perform: listenAndLoad)
+            .navigationBarTitle("Welcome", displayMode: .inline)
+        }
     }
 
     func listenAndLoad () {

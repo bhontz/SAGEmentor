@@ -17,12 +17,11 @@ struct HomeView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width:400, height:80)
+                .offset(y: 10)
             Text(god)
                 .font(.title)
             HStack(spacing: 20) {
-                Button(action: {
-                    print("pressed the button!")
-                }) {
+                NavigationLink(destination:ToDoView()) {
                     Image("greenbutton")
                         .renderingMode(.original)
                         .resizable()
@@ -86,6 +85,7 @@ struct HomeView: View {
             }
             Spacer()
         }
+        .navigationBarTitle("Home", displayMode: .inline)
     }
 }
 
