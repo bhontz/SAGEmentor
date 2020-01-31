@@ -19,8 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        let userData = UserData()
-        let contentView = ContentView().environmentObject(userData)
+        // added this when we added the environmental object "SessionStore"
+        let session = SessionStore()
+        let contentView = ContentView().environmentObject(session)
+
 //        let contentView = ContentView()  ORIGINAL
                 
         // Use a UIHostingController as window root view controller.

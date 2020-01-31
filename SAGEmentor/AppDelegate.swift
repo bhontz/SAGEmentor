@@ -19,25 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-                
-//        // go out and check to see if you have a saved user and try to authenticate with that
-//        if let currentUser = self.getObject(fileName: "currentUserId") as? UserInfo {
-//            print("I recovered: \(currentUser.userName ?? "bogus") \(currentUser.emailAddress ?? "bogus")")
-//
-//            let firebaseAuth = Auth.auth()
-//            firebaseAuth.signIn(with: (currentUser.userCredential ?? nil)!) { (result, error) in
-//                if error == nil {
-//                    print("already had a stored login:")
-//                    print(result?.user.email)
-//                    print(result?.user.displayName)
-//                    print(result?.user.metadata.creationDate)
-//                    print(result?.user.metadata.lastSignInDate)
-//                } else {
-//                    print(error?.localizedDescription)
-//                }
-//            }
-//        }
-            
+                            
         return true
     }
 
@@ -52,20 +34,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let firebaseAuth = Auth.auth()
             firebaseAuth.signIn(with: credential) { (result, error) in
                 if error == nil {
-                    guard let un = result?.user.displayName else {return}
-                    guard let em = result?.user.email else {return}
-                    currentUser = UserInfo(username: un, emailaddress: em)
+//                    guard let un = result?.user.displayName else {return}
+//                    guard let em = result?.user.email else {return}
+//                    currentUser = UserInfo(username: un, emailaddress: em)
 //
 //                    if self.saveObject(fileName: "currentUserId", object: currentUser) {
 //                        print("saved log in credentials")
 //                    } else {
 //                        print("error saving log in credentials")
 //                    }
-                    
-                    print(result?.user.email)
-                    print(result?.user.displayName)
-                    print(result?.user.metadata.creationDate)
-                    print(result?.user.metadata.lastSignInDate)
+//
+//                    print(result?.user.email)
+//                    print(result?.user.displayName)
+//                    print(result?.user.metadata.creationDate)
+//                    print(result?.user.metadata.lastSignInDate)
                     
                 } else {
                     print(error?.localizedDescription)
@@ -94,79 +76,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 }
 
-// you can just add this extension to save, get and delete an object to local storage
-extension UIApplicationDelegate {
-    
-    // Save object in document directory
-    func saveObject(fileName: String, object: Any) -> Bool {
-        
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//1
-        do {
-            let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)
-            try data.write(to: filePath)
-            return true
-        } catch {
-            print("error is: \(error.localizedDescription)")
-        }
-        return false
-    }
-    
-    // Get object from document directory
-    func getObject(fileName: String) -> Any? {
-        
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)
-        do {
-            let data = try Data(contentsOf: filePath)
-            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
-            return object
-        } catch {
-            print("error is: \(error.localizedDescription)")
-        }
-        return nil
-    }
-    
-    func removeObjectFolder(fileName: String) -> Bool {
-        let fileManager = FileManager.default
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)
-        do {
-            if fileManager.fileExists(atPath: filePath.absoluteString) {
-                print("file doesn't exist")
-                return false
-            } else {
-                try fileManager.removeItem(at: filePath)
-            }
-        } catch {
-            print("Something weird happened")
-            return false
-        }
-        return true
-    }
-    
-    //Get the document directory path
-    func getDirectoryPath() -> URL {
-        let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return arrayPaths[0]
-    }
-    
-    //  * * * HERE IS SOME EXAMPLE USAGE * * *
-    //                let userCurrent = UserInfo(username: "Brad Hontz", emailaddress: "brad.hontz@pinpointview.com")
-    //
-    //                if self.saveObject(fileName: "currentUserId", object: userCurrent) {
-    //                    print("saved")
-    //                } else {
-    //                    print("error saving")
-    //                }
 
-    //        // This is the way you can delete the file/folder we created if you want to clean stuff up
-    //                if self.removeObjectFolder(fileName: "currentUserId")  {
-    //                    print("file was deleted")
-    //                } else {
-    //                    print("file was not deleted")
-    //                }
-
-    //                if let newValue = self.getObject(fileName: "currentUserId") as? UserInfo {
-    //                    print("I recovered: \(newValue.userName ?? "bogus") \(newValue.emailAddress ?? "bogus")")
-    //                }
-    
-}
 

@@ -7,14 +7,21 @@
 //
 
 import SwiftUI
+import GoogleSignIn
+import Firebase
 
 struct WelcomeView: View {
     @Binding var results : [Result]
     @State private var god: String = ""
     @State private var pushed: Bool = false
+    @EnvironmentObject var session: SessionStore
 
     var body: some View {
         VStack {
+//            Button("sign in as another user") {
+//                self.signOut()
+//            }
+//            .padding(.vertical, 200.0)
             timeOfDayImage()
             Text(results[0].quote)
                 .font(.title)
@@ -53,6 +60,20 @@ struct WelcomeView: View {
             default:
                 return Image("morning")
         }
+    }
+
+    func signOut() {
+        print("Signing out... ")
+        GIDSignIn.sharedInstance().signOut()
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out of Firebase: %@", signOutError)
+            return
+        }
+        print("Signed out of Firebase and Google!")
+        self.session.unbind()
     }
 }
 

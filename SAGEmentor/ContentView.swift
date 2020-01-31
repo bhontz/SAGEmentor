@@ -13,27 +13,31 @@ import Firebase
 struct ContentView: View {
     @State private var pushed: Bool = false
     @State private var results: [Result] = [Result(date:"empty", quote:"empty")]
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var session: SessionStore
 
     var body: some View {
         NavigationView {
             VStack {
-                if userData.loggedIn {
+                if session.isLoggedIn == true {
                     WelcomeView(results: $results)
                 } else {
                     Button(action: {
                         SocialLogin().attemptLoginGoogle()
-                        // be great if you could WAIT for the operation above to complete!!
-                        // alteratively, explore loading a separate screen modally, perhaps google log in
-                        self.userData.loggedIn = true
                     }, label: {Image("google_signin")
                                 .resizable()
                                 .frame(width:400, height:100)
                     })
                 }
             }
-        }.onAppear(perform: loadData)
+        }.onAppear(perform: listenAndLoad)
     }
+
+    func listenAndLoad () {
+        loadData()
+        self.session.listen() // listen to see if we have a user yet (or not)
+    }
+
+    // this function loads performs the API call
     func loadData() {
         guard let url = URL(string: "https://quotes.rest/qod.json?category=inspire") else {
             print("invalid URL!")
@@ -53,9 +57,9 @@ struct ContentView: View {
             print("fetch failed: \(error?.localizedDescription ?? "Unknown Error")")
         }.resume()
     }
-    
 }
 
+// this is a DEBUGGING function you can add to views to facilitate printing out variables to the console
 extension View {
     func Print(_ vars: Any...) -> some View {
         for v in vars { print(v) }
@@ -63,46 +67,7 @@ extension View {
     }
 }
 
-//struct ToWelcomeView: View {
-//    @Binding var pushed: Bool
-//    @Binding var results : [Result]
-//    var body: some View {
-//        WelcomeView(results: $results)
-//            .navigationBarBackButtonHidden(true)
-//            .navigationBarItems(leading: BackToLogin(label:"Sign In as another user") {
-//                self.pushed = false
-//            })
-//    }
-//}
-//
-//struct BackToLogin: View {
-//    let label: String
-//    let closure: () -> ()
-//
-//    var body: some View {
-//        Button(action: { self.signOut(); self.closure() }) {
-//            HStack {
-//                Image(systemName: "chevron.left")
-//                Text(label)
-//            }
-//        }
-//    }
-//    func signOut() {
-//        print("Signing out... ")
-//        currentUser = UserInfo(username:"", emailaddress:"")
-//        GIDSignIn.sharedInstance().signOut()
-//        let firebaseAuth = Auth.auth()
-//        do {
-//            try firebaseAuth.signOut()
-//        } catch let signOutError as NSError {
-//            print("Error signing out of Firebase: %@", signOutError)
-//            return
-//        }
-//        print("Signed out of Firebase and Google!")
-//    }
-//}
-
-// You only need this if your using the "button()" methodology of calling the google signin process
+// structure for signing in with Google
 struct SocialLogin: UIViewRepresentable {
 
     func makeUIView(context: UIViewRepresentableContext<SocialLogin>) -> UIView {
@@ -118,7 +83,6 @@ struct SocialLogin: UIViewRepresentable {
     }
 
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
