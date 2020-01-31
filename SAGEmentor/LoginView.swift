@@ -13,27 +13,28 @@ import Firebase
 struct LoginView: View {
     @Binding var results : [Result]
     @State private var pushed: Bool = false
+    
     var body: some View {
         VStack {
-            Button(action: {
-                SocialLogin().attemptLoginGoogle()
-                // be great if you could WAIT for the operation above to complete!!
-                // alteratively, explore loading a separate screen modally, perhaps google log in
-                self.pushed = true
-            }, label: {Image("google_signin")
-                        .resizable()
-                        .frame(width:400, height:100)
-
-            })
-            NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView()}
-// // this is another way of presenting the log in
-//            Text("Login with Google:")
-//            googleLogIn().frame(width:120, height:50)
-//            Divider()
-//            Button("Welcome View") {
+//            Button(action: {
+//                SocialLogin().attemptLoginGoogle()
+//                // be great if you could WAIT for the operation above to complete!!
+//                // alteratively, explore loading a separate screen modally, perhaps google log in
 //                self.pushed.toggle()
-//            }
-//            NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView() }
+//            }, label: {Image("google_signin")
+//                        .resizable()
+//                        .frame(width:400, height:100)
+//
+//            })
+//            NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView()}
+ // this is another way of presenting the log in
+            Text("Login with Google:")
+            googleLogIn().frame(width:120, height:50)
+            Divider()
+            Button("Welcome View") {
+                self.pushed.toggle()
+            }
+            NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView() }
         }
     }
 }
@@ -78,22 +79,22 @@ struct BackToLogin: View {
 }
 
 
-// You only need this if your using the "button()" methodology of calling the google signin process
-struct SocialLogin: UIViewRepresentable {
-
-    func makeUIView(context: UIViewRepresentableContext<SocialLogin>) -> UIView {
-        return UIView()
-    }
-
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<SocialLogin>) {
-    }
-
-    func attemptLoginGoogle() {
-        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
-        GIDSignIn.sharedInstance()?.signIn()
-    }
-
-}
+//// You only need this if your using the "button()" methodology of calling the google signin process
+//struct SocialLogin: UIViewRepresentable {
+//
+//    func makeUIView(context: UIViewRepresentableContext<SocialLogin>) -> UIView {
+//        return UIView()
+//    }
+//
+//    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<SocialLogin>) {
+//    }
+//
+//    func attemptLoginGoogle() {
+//        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
+//        GIDSignIn.sharedInstance()?.signIn()
+//    }
+//
+//}
 
 struct googleLogIn: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<googleLogIn>) -> GIDSignInButton {

@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
@@ -61,12 +62,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 //                        print("error saving log in credentials")
 //                    }
                     
-                    print("just logged in via button:")
-                    print(credential)
                     print(result?.user.email)
                     print(result?.user.displayName)
                     print(result?.user.metadata.creationDate)
                     print(result?.user.metadata.lastSignInDate)
+                    
                 } else {
                     print(error?.localizedDescription)
                 }

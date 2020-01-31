@@ -13,30 +13,27 @@ import Firebase
 struct ContentView: View {
     @State private var pushed: Bool = false
     @State private var results: [Result] = [Result(date:"empty", quote:"empty")]
+    @EnvironmentObject var userData: UserData
 
     var body: some View {
         NavigationView {
             VStack {
-//                Button(action: {
-//                    SocialLogin().attemptLoginGoogle()
-//                    //self.pushed.toggle()
-//                    self.pushed = true
-//                }, label: {Image("google_signin")
-//                            .resizable()
-//                            .frame(width:400, height:100)
-//
-//                })
-//                NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView()}
-                LoginView(results: $results)
-//                Divider()
-//                Button("Welcome View") {
-//                    self.pushed.toggle()
-//                }
-//                NavigationLink(destination: ToWelcomeView(pushed: $pushed, results: $results), isActive: $pushed) { EmptyView() }
-            }.onAppear(perform:loadData)  // gets data from the Quote Of the Day API
-        }
+                if userData.loggedIn {
+                    WelcomeView(results: $results)
+                } else {
+                    Button(action: {
+                        SocialLogin().attemptLoginGoogle()
+                        // be great if you could WAIT for the operation above to complete!!
+                        // alteratively, explore loading a separate screen modally, perhaps google log in
+                        self.userData.loggedIn = true
+                    }, label: {Image("google_signin")
+                                .resizable()
+                                .frame(width:400, height:100)
+                    })
+                }
+            }
+        }.onAppear(perform: loadData)
     }
-        
     func loadData() {
         guard let url = URL(string: "https://quotes.rest/qod.json?category=inspire") else {
             print("invalid URL!")
@@ -57,6 +54,13 @@ struct ContentView: View {
         }.resume()
     }
     
+}
+
+extension View {
+    func Print(_ vars: Any...) -> some View {
+        for v in vars { print(v) }
+        return EmptyView()
+    }
 }
 
 //struct ToWelcomeView: View {
@@ -99,21 +103,21 @@ struct ContentView: View {
 //}
 
 // You only need this if your using the "button()" methodology of calling the google signin process
-//struct SocialLogin: UIViewRepresentable {
-//
-//    func makeUIView(context: UIViewRepresentableContext<SocialLogin>) -> UIView {
-//        return UIView()
-//    }
-//
-//    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<SocialLogin>) {
-//    }
-//
-//    func attemptLoginGoogle() {
-//        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
-//        GIDSignIn.sharedInstance()?.signIn()
-//    }
-//
-//}
+struct SocialLogin: UIViewRepresentable {
+
+    func makeUIView(context: UIViewRepresentableContext<SocialLogin>) -> UIView {
+        return UIView()
+    }
+
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<SocialLogin>) {
+    }
+
+    func attemptLoginGoogle() {
+        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+
+}
 
 
 struct ContentView_Previews: PreviewProvider {
