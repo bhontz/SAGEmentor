@@ -14,7 +14,7 @@ struct ToDoView: View {
     var body: some View {
         NavigationView {
             List{
-                Section(header: Text("My ToDos:")) {
+                Section(header: Text("Get 'er Done:")) {
                     HStack{
                         TextField("New Item", text: self.$newToDoItem)
                         Button(action: {
@@ -26,13 +26,16 @@ struct ToDoView: View {
                         }
                     }
                 }
+                .font(.headline)
             }
+            .navigationBarTitle(Text("To Do"))
+            .navigationBarItems(trailing: EditButton())
         }
     }
 }
 
-//struct ToDoView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ToDoView()
-//    }
-//}
+struct ToDoView_Previews: PreviewProvider {
+    static var previews: some View {
+        ToDoView()
+    }
+}
