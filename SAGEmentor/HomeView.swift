@@ -14,6 +14,7 @@ struct HomeView: View {
         VStack(spacing: 10) {
             //Text("Today I will:")
             Image("morning")
+           // Image("afternoon")
                 .resizable()
                 .scaledToFit()
                 .frame(width:400, height:80)

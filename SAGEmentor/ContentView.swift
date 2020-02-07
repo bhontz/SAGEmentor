@@ -62,12 +62,12 @@ struct ContentView: View {
 }
 
 // this is a DEBUGGING function you can add to views to facilitate printing out variables to the console
-extension View {
-    func Print(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
-    }
-}
+//extension View {
+//    func Print(_ vars: Any...) -> some View {
+//        for v in vars { print(v) }
+//        return EmptyView()
+//    }
+//}
 
 // structure for signing in with Google
 struct SocialLogin: UIViewRepresentable {

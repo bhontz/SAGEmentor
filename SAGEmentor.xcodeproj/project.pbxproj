@@ -20,7 +20,7 @@
 		A29EA7AD23DB9C0C00E1A9A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A29EA7AB23DB9C0C00E1A9A6 /* LaunchScreen.storyboard */; };
 		A29EA7B823DB9C0C00E1A9A6 /* SAGEmentorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EA7B723DB9C0C00E1A9A6 /* SAGEmentorTests.swift */; };
 		A2C8105C23DBA7FF0051C458 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8105B23DBA7FF0051C458 /* GlobalData.swift */; };
-		A2FA0FC123DBAFB400F8B26D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2FA0FC023DBAFB400F8B26D /* GoogleService-Info.plist */; };
+		A2D3637F23EE2BD200B9E2CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D3637E23EE2BD200B9E2CD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		A29EA7B723DB9C0C00E1A9A6 /* SAGEmentorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAGEmentorTests.swift; sourceTree = "<group>"; };
 		A29EA7B923DB9C0C00E1A9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C8105B23DBA7FF0051C458 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
-		A2FA0FC023DBAFB400F8B26D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2D3637E23EE2BD200B9E2CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 				A2C8105B23DBA7FF0051C458 /* GlobalData.swift */,
 				A29EA7A623DB9C0C00E1A9A6 /* Assets.xcassets */,
 				A29EA7AB23DB9C0C00E1A9A6 /* LaunchScreen.storyboard */,
+				A2D3637E23EE2BD200B9E2CD /* GoogleService-Info.plist */,
 				A29EA7AE23DB9C0C00E1A9A6 /* Info.plist */,
-				A2FA0FC023DBAFB400F8B26D /* GoogleService-Info.plist */,
 				A29EA7A823DB9C0C00E1A9A6 /* Preview Content */,
 			);
 			path = SAGEmentor;
@@ -240,7 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A29EA7AD23DB9C0C00E1A9A6 /* LaunchScreen.storyboard in Resources */,
-				A2FA0FC123DBAFB400F8B26D /* GoogleService-Info.plist in Resources */,
+				A2D3637F23EE2BD200B9E2CD /* GoogleService-Info.plist in Resources */,
 				A29EA7AA23DB9C0C00E1A9A6 /* Preview Assets.xcassets in Resources */,
 				A29EA7A723DB9C0C00E1A9A6 /* Assets.xcassets in Resources */,
 			);

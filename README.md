@@ -8,9 +8,9 @@ We'll also be using this repo to learn how use Git/Github!
 
 **Version History**
 
-Summary of functionality through 2020-01-31
+Summary of functionality through 2020-02-07
 
-..+ started to stub out the todo list functionality
+..+ functional ToDo view (add a todo item, delete a todo item)
 
 ..+ Have a working login process, but no "log out" outside of doing so from within the firebase admin
 
