@@ -8,7 +8,9 @@ We'll also be using this repo to learn how use Git/Github!
 
 **Version History**
 
-Summary of functionality through 2020-02-07
+Summary of functionality through 2020-02-09
+
+..+ simple "water tracker" for illustration and prompting discussion
 
 ..+ functional ToDo view (add a todo item, delete a todo item)
 
