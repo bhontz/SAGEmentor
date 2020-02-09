@@ -109,6 +109,7 @@ struct ToDoView: View {
 //        .navigationBarItems(trailing: EditButton())
     }
     
+    
     func removeToDo(username: String, key: String) {
         var ref: DatabaseReference!
         

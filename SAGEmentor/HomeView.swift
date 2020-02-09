@@ -61,15 +61,22 @@ struct HomeView: View {
             HStack(spacing: 20) {
                 Spacer()
                 Text("Trackers")
-                Button(action: {
-                    print("pressed the button!")
-                }) {
-                    Image("redbutton")
+                NavigationLink(destination:WaterView()) {
+                    Image("greenbutton")
                         .renderingMode(.original)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 60, height: 60)
                 }.offset(x: -10)
+//                Button(action: {
+//                    print("pressed the button!")
+//                }) {
+//                    Image("redbutton")
+//                        .renderingMode(.original)
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 60, height: 60)
+//                }.offset(x: -10)
             }
             HStack(spacing: 20) {
                 Button(action: {

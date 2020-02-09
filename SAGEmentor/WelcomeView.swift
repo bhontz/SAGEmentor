@@ -16,13 +16,13 @@ struct WelcomeView: View {
     @EnvironmentObject var session: SessionStore
 
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             timeOfDayImage()
             Text(results[0].quote)
                 .font(.title)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
-                .padding(.vertical, 10.0)
+                .padding(.horizontal, 10.0)
             Divider()
             Text("Today I will:")
             TextField("Today's Goal", text: $god)
