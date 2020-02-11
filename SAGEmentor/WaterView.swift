@@ -43,26 +43,80 @@ struct BucketFiller: Shape {
 
 struct WaterView: View {
     @State private var addWater = 1
+    private var hydrationGoal = 66
     
     var body: some View {        
         NavigationView {
-            VStack {
-                HStack(spacing: 20) {
-                    Button(action: {
-                        self.addWater += 2
-                    }) {
-                        Image("greenbutton")
-                            .renderingMode(.original)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 60, height: 60)
-                    }.offset(x: 10)
-                    Text("Drank some water")
-                    Spacer()
+            ZStack {
+                VStack {
+                    HStack(spacing: 20) {
+                        Button(action: {
+                            if self.addWater + 12 > self.hydrationGoal {
+                                self.addWater = self.hydrationGoal
+                            } else {
+                                self.addWater += 12
+                            }
+                        }) {
+                            Image("cup_8_oz")
+                                .renderingMode(.original)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                        }.offset(x: 10)
+                        Text("8oz")
+                            .font(.body)
+
+                        Button(action: {
+                            if self.addWater + 8 > self.hydrationGoal {
+                                self.addWater = self.hydrationGoal
+                            } else {
+                                self.addWater += 8
+                            }
+                        }) {
+                            Image("plastic_water_bottle_12_oz")
+                                .renderingMode(.original)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                        }.offset(x: 10)
+                        Text("12oz")
+                            .font(.body)
+                        Button(action: {
+                            if self.addWater + 22 > self.hydrationGoal {
+                                self.addWater = self.hydrationGoal
+                            } else {
+                                self.addWater += 22
+                            }
+                        }) {
+                            Image("metal_bottle_22_oz")
+                                .renderingMode(.original)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                        }.offset(x: 10)
+                        Text("22oz")
+                            .font(.body)
+
+                        
+                        
+                        Spacer()
+                    }
+                    // 167 was hardwired after finding width of iPhone 11 pallette was 414
+                    BucketFiller(x: 167, y: 600, oz: self.addWater)
+                        .fill(Color.blue)
                 }
-                // 167 was hardwired after finding width of iPhone 11 pallette was 414
-                BucketFiller(x: 167, y: 480, oz: self.addWater)
-                    .fill(Color.blue)
+                if self.addWater < self.hydrationGoal {
+                    Text("\(self.addWater) oz")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                } else {
+                    Text("Goal Achieved!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.yellow)
+                }
+                
             }
         }
         .navigationBarTitle("Water")

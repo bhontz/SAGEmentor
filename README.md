@@ -8,7 +8,9 @@ We'll also be using this repo to learn how use Git/Github!
 
 **Version History**
 
-Summary of functionality through 2020-02-09
+Summary of functionality through 2020-02-11
+
+..+ added cup, plastic, metal water bottle increments and oz counter / goal achieved (still not saving data though)
 
 ..+ simple "water tracker" for illustration and prompting discussion
 
